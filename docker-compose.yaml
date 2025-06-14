@@ -53,6 +53,6 @@ networks:
     name: authelia_network
 
 volumes:
-  caddy-data:
-  caddy-config:
+#  caddy-data:
+#  caddy-config:
   valkey-data2:
