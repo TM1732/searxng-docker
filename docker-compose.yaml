@@ -52,7 +52,6 @@ networks:
     external: true
     name: authelia_network
 
-
 volumes:
   caddy-data:
   caddy-config:
