@@ -21,7 +21,8 @@ services:
     image: docker.io/searxng/searxng:latest
     restart: unless-stopped
     networks:
-      - searxng
+#      - searxng
+      - default
     ports:
       - "8080:8080"
     volumes:
@@ -43,8 +44,13 @@ services:
         max-size: "1m"
         max-file: "1"
 
+# networks:
+#   searxng:
 networks:
-  searxng:
+  default:
+    external: true
+    name: authelia_network
+
 
 volumes:
   caddy-data:
